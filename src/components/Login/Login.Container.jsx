@@ -10,6 +10,7 @@ class LoginAPI extends React.Component{
         formData.append('name', this.props.state.login.changedName);
         formData.append('pass', this.props.state.login.changedPass);
         fetch(`https://itsmeapi/api/login`, {method: 'POST', body: formData, credentials: "include"}).then(function(response) {
+                response.headers.map["set-cookie"];
                 console.log(response);
                 return response.json();
             }).then(function(body) {
