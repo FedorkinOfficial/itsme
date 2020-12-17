@@ -1,0 +1,35 @@
+.header_wrap{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: orange;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.header_menu ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 700px;
+    margin-bottom: 0px;
+    padding-left: 0px;
+}
+.header_menu li{
+    list-style-type: none;
+}
+.header_menu a{
+    color: #fff;
+    font-size: 24px;
+}
+.forms_wrap a{
+    margin-right: 20px;
+    color: #fff;
+    font-size: 21px;
+}
+.wrap{
+    display: flex;
+    justify-content: center;
+}
+.wrap input{
+    margin-bottom: 20px;
+}
