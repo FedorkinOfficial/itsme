@@ -9,7 +9,7 @@ import {authLoginAC} from '../../reducers/loginReducer';
 class HeaderAPI extends React.Component{
     componentDidMount(){
         let authLogin = (data) => this.props.authLoginAC(data)
-        axios.get('https://itsmeapi/api/users', {credentials: 'include', mode: 'cors'}, {credentials: 'include', mode: 'cors'}).then(function(response) {
+        fetch('https://itsmeapi/api/users', {method: 'GET', credentials: 'include', mode: 'cors'}, {credentials: 'include', mode: 'cors'}).then(function(response) {
                 console.log(response);
                 if(!response.data.status){
                      console.log("There are not cookies");
