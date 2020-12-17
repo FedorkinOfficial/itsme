@@ -1,7 +1,6 @@
 <IfModule mod_rewrite.c>
 
 
-  RewriteEngine On
   RewriteEngine on
   RewriteCond %{HTTP_HOST} ^itsme-ten.vercel.app
   RewriteRule ^(.*)$ https://itsme-ten.vercel.app/$1 [R=permanent,L]
