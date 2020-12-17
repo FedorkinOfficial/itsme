@@ -1,7 +1,7 @@
 <?php
 
 $method = $_SERVER['REQUEST_METHOD'];
-header('Access-Control-Allow-Origin: http://itsmeapi');
+header('Access-Control-Allow-Origin: https://itsme-ten.vercel.app');
 header('Access-Control-Allow-Headers: *');
 header('Access-Control-Allow-Methods: *');
 header('Access-Control-Allow-Credentials: true');
