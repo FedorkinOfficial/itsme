@@ -31,11 +31,14 @@ class LoginAPI extends React.Component{
             method: 'post',
             url: 'https://mineproapi.000webhostapp.com/api/login',
             data: formData,
-            withCredentials: true
+            withCredentials: true,
+            headers: {
+                'Authorization': 'TOKEN'
+              }
             })
             .then(function (response) {
                 //handle success
-                console.log(response.headers.set-cookie);
+                console.log(response.headers);
             })
             .catch(function (response) {
                 //handle error
