@@ -14,7 +14,7 @@ class HeaderAPI extends React.Component{
                 return response.json();
             }).then(function(body) {
                 // authLogin(response.data.info);
-                console.log(response.body) 
+                console.log(body) 
             });
         // axios.get('https://mineproapi.000webhostapp.com/api/users', {withCredentials: true}).then(function(response) {
         //         console.log(response);
