@@ -9,7 +9,7 @@ import {authLoginAC} from '../../reducers/loginReducer';
 class HeaderAPI extends React.Component{
     componentDidMount(){
         let authLogin = (data) => this.props.authLoginAC(data)
-        fetch(`https://mineproapi.000webhostapp.com/api/users`, {mode: 'cors', credentials: 'include'}).then(function(response) {
+        fetch("https://mineproapi.000webhostapp.com/api/users", {credentials: 'include'}).then(function(response) {
                 console.log(response);
                 return response.json();
             }).then(function(body) {
