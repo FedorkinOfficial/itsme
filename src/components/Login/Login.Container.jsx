@@ -35,7 +35,7 @@ class LoginAPI extends React.Component{
             }, {withCredentials: true})
             .then(function (response) {
                 //handle success
-                console.log(response.headers.content-length);
+                console.log(response.headers);
             })
             .catch(function (response) {
                 //handle error
