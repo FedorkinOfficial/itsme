@@ -42,9 +42,6 @@ class HeaderAPI extends React.Component{
             .then(function (response) {
                 console.log(response);
                 console.log(response.data);
-            })
-            .catch(function (response) {
-                console.log(response);
             });
     }
  
