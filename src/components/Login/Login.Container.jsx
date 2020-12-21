@@ -35,10 +35,8 @@ class LoginAPI extends React.Component{
             withCredentials: true
             }, {withCredentials: true})
             .then(function (response) {
-                //handle success 
                 const cookies = new Cookies();
-                cookies.set('myCat', 'Pacman', { path: '/' });
-                localStorage.setItem('token', response.data.token);
+                cookies.set('token', response.data.token, { path: '/', expires: +40});
                 console.log(response.data);
             })
             .catch(function (response) {
