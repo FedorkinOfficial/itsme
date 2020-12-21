@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import Header from './Header';
 import axios from 'axios';
 import {authLoginAC} from '../../reducers/loginReducer';
-
+import { Cookies } from 'react-cookie'
 
 
 class HeaderAPI extends React.Component{
@@ -27,7 +27,7 @@ class HeaderAPI extends React.Component{
                     console.log(response.data)
                 }
             })
-        let cook = get('token');
+        let cook = cookies.get('token');
         axios({
             method: 'post',
             url: 'https://mineproapi.000webhostapp.com/api/users',
