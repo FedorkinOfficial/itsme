@@ -9,12 +9,12 @@ import {authLoginAC} from '../../reducers/loginReducer';
 class HeaderAPI extends React.Component{
     componentDidMount(){
         // let authLogin = (data) => this.props.authLoginAC(data);
-        fetch("https://mineproapi.000webhostapp.com/api/rusers",{method: 'POST', credentials: 'include'}).then(function(response) {
-                    console.log(response);
-                    return response.json();
-                }).then(function(body) {
-                    console.log(body);
-                });
+        // fetch("https://mineproapi.000webhostapp.com/api/rusers",{method: 'POST', credentials: 'include'}).then(function(response) {
+        //             console.log(response);
+        //             return response.json();
+        //         }).then(function(body) {
+        //             console.log(body);
+        //         });
         // axios.get('https://mineproapi.000webhostapp.com/api/users', {withCredentials: true}, {withCredentials: true}).then(function(response) {
         //         console.log(response);
         //         if(!response.data.status){
@@ -28,16 +28,15 @@ class HeaderAPI extends React.Component{
         // let cookie = new Cookie();
         // let formData = new FormData();
         // formData.append('token', cookie.get('token'));
-        // axios({
-        //     method: 'post',
-        //     url: 'https://mineproapi.000webhostapp.com/api/rusers',
-        //     data: formData,
-        //     withCredentials: true
-        //     }, {withCredentials: true})
-        //     .then(function (response) {
-        //         console.log(response);
-        //         console.log(response.data);
-        //     });
+        axios({
+            method: 'post',
+            url: 'http://itsmeapi/api/rusers',
+            data: formData,
+            })
+            .then(function (response) {
+                console.log(response);
+                console.log(response.data);
+            });
     }
  
     render(){
