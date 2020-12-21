@@ -34,8 +34,8 @@ class LoginAPI extends React.Component{
             data: formData
             })
             .then(function (response) {
-                const cookies = new Cookies();
-                cookies.set('token', response.data.token, { path: '/', expires: 40});
+                // const cookies = new Cookies();
+                // cookies.set('token', response.data.token, { path: '/', expires: 40});
                 console.log(response.data);
             })
             .catch(function (response) {
