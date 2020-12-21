@@ -30,7 +30,8 @@ class LoginAPI extends React.Component{
         axios({
             method: 'post',
             url: 'https://mineproapi.000webhostapp.com/api/login',
-            data: formData
+            data: formData,
+            withCredentials: true
             })
             .then(function (response) {
                 //handle success
