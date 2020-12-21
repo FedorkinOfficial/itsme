@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import Header from './Header';
 import axios from 'axios';
 import {authLoginAC} from '../../reducers/loginReducer';
-import cookie from 'universal-cookie';
+import Cookie from 'universal-cookie';
 
 
 class HeaderAPI extends React.Component{
@@ -27,6 +27,7 @@ class HeaderAPI extends React.Component{
         //             console.log(response.data)
         //         }
         //     })
+        let cookie = new Cookie();
         let formData = new FormData();
         formData.append('token', cookie.get('token'));
         axios({
