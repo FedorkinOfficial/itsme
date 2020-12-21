@@ -32,10 +32,10 @@ class LoginAPI extends React.Component{
             url: 'https://mineproapi.000webhostapp.com/api/login',
             data: formData,
             withCredentials: true
-            })
+            }, {withCredentials: true})
             .then(function (response) {
                 //handle success
-                console.log(response.headers);
+                console.log(response.headers.content-length);
             })
             .catch(function (response) {
                 //handle error
