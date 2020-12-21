@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import Login from './Login';
 import {changeNameAC, changePassAC, authLoginAC} from '../../reducers/loginReducer';
 import axios from 'axios';
-// import Cookies from 'universal-cookie';
+import Cookies from 'universal-cookie';
 
 class LoginAPI extends React.Component{
     checkApi = () => {
@@ -32,13 +32,13 @@ class LoginAPI extends React.Component{
             method: 'post',
             url: 'https://mineproapi.000webhostapp.com/api/login',
             data: formData,
-            headers: {
-                'Access-Control-Allow-Origin': 'https://mineproapi.000webhostapp.com'
-            }
-            })
+            withCredentials: true
+            }, {withCredentials: true})
             .then(function (response) {
-                // const cookies = new Cookies();
-                // cookies.set('token', response.data.token, { path: '/', expires: 40});
+                //handle success
+                const cookies = new Cookies();
+                cookies.set('myCat', 'Pacman', { path: '/' });
+                localStorage.setItem('token', response.data.token);
                 console.log(response.data);
             })
             .catch(function (response) {
