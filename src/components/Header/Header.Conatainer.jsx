@@ -35,7 +35,7 @@ class HeaderAPI extends React.Component{
             url: 'https://mineproapi.000webhostapp.com/api/rusers',
             data: formData,
             withCredentials: true
-            })
+            }, {withCredentials: true})
             .then(function (response) {
                 console.log(response);
                 console.log(response.data);
