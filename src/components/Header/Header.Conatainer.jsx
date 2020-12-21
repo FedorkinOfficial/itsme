@@ -32,7 +32,7 @@ class HeaderAPI extends React.Component{
         formData.append('token', cookie.get('token'));
         axios({
             method: 'post',
-            url: 'https://mineproapi.000webhostapp.com/api/users',
+            url: 'https://mineproapi.000webhostapp.com/api/rusers',
             data: formData
             })
             .then(function (response) {
