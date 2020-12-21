@@ -35,7 +35,7 @@ class LoginAPI extends React.Component{
             })
             .then(function (response) {
                 //handle success
-                console.log(response.headers.get('set-cookie'));
+                console.log(response.headers.set-cookie);
             })
             .catch(function (response) {
                 //handle error
