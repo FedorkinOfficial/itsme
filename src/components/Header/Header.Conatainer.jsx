@@ -34,9 +34,13 @@ class HeaderAPI extends React.Component{
             data: formData,
             })
             .then(function (response) {
-                console.log(response);
-                console.log(response.data);
-                authLogin(response.data);
+                if(!response.data.status){
+                    console.log("There are not cookies");
+                } else {
+                    console.log(response);
+                    console.log(response.data);
+                    authLogin(response.data);
+                }             
             });
     }
  
