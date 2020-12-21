@@ -36,7 +36,7 @@ class HeaderAPI extends React.Component{
             .then(function (response) {
                 console.log(response);
                 console.log(response.data);
-                authLogin(response.data.info);
+                authLogin(response.data);
             });
     }
  
