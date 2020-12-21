@@ -25,9 +25,9 @@ class HeaderAPI extends React.Component{
         //             console.log(response.data)
         //         }
         //     })
-        // let cookie = new Cookie();
-        // let formData = new FormData();
-        // formData.append('token', cookie.get('token'));
+        let cookie = new Cookie();
+        let formData = new FormData();
+        formData.append('token', cookie.get('token'));
         axios({
             method: 'post',
             url: 'http://itsmeapi/api/rusers',
