@@ -1,9 +1,9 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import Header from './Header';
-// import axios from 'axios';
+import axios from 'axios';
 import {authLoginAC} from '../../reducers/loginReducer';
-// import Cookies from 'universal-cookie';
+import cookie from 'universal-cookie';
 
 
 class HeaderAPI extends React.Component{
@@ -27,9 +27,8 @@ class HeaderAPI extends React.Component{
         //             console.log(response.data)
         //         }
         //     })
-        const cookies = new Cookies(req.headers.cookie);
         let formData = new FormData();
-        formData.append('token', cookies.get('token'));
+        formData.append('token', cookie.get('token'));
         axios({
             method: 'post',
             url: 'https://mineproapi.000webhostapp.com/api/users',
