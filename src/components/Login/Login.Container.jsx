@@ -7,7 +7,7 @@ import Cookies from 'universal-cookie';
 
 class LoginAPI extends React.Component{
     checkApi = () => {
-        let authLogin = (data) => this.props.authLoginAC(data);  
+        //let authLogin = (data) => this.props.authLoginAC(data);  
         let formData = new FormData();
         formData.append('name', this.props.state.login.changedName);
         formData.append('pass', this.props.state.login.changedPass);
