@@ -4,7 +4,6 @@ import Login from './Login';
 import {changeNameAC, changePassAC, authLoginAC} from '../../reducers/loginReducer';
 import axios from 'axios';
 import Cookies from 'universal-cookie';
-import { useCookies } from 'react-cookie';
 
 class LoginAPI extends React.Component{
     checkApi = () => {
@@ -37,8 +36,7 @@ class LoginAPI extends React.Component{
             }, {withCredentials: true})
             .then(function (response) {
                 const cookies = new Cookies();
-                cookies.set('token', response.data.token, { path: '/', maxAge: 40});
-                setCookie('name', "Hi", { path: '/' });
+                cookies.set('token', response.data.token, { path: '/', expires: 40});
                 console.log(response.data);
             })
             .catch(function (response) {
