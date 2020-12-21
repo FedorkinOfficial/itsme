@@ -27,18 +27,18 @@ class HeaderAPI extends React.Component{
         //             console.log(response.data)
         //         }
         //     })
-        // const cookies = new Cookies(headers.cookie);
-        // let formData = new FormData();
-        // formData.append('token', cookies.get('token'));
-        // axios({
-        //     method: 'post',
-        //     url: 'https://mineproapi.000webhostapp.com/api/users',
-        //     data: formData
-        //     })
-        //     .then(function (response) {
-        //         console.log(response);
-        //         console.log(response.data);
-        //     });
+        const cookies = new Cookies(req.headers.cookie);
+        let formData = new FormData();
+        formData.append('token', cookies.get('token'));
+        axios({
+            method: 'post',
+            url: 'https://mineproapi.000webhostapp.com/api/users',
+            data: formData
+            })
+            .then(function (response) {
+                console.log(response);
+                console.log(response.data);
+            });
     }
  
     render(){
