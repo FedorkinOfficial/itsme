@@ -16,7 +16,7 @@ class LoginAPI extends React.Component{
         //         console.log(body);
         //         authLogin(body); 
         //     });
-        axios.post('https://mineproapi.000webhostapp.com/api/login', {posted_data: formData, withCredentials: true}, {withCredentials: true}).then(function(response) {
+        axios.post('https://mineproapi.000webhostapp.com/api/login', {formData}, {withCredentials: true}).then(function(response) {
                 console.log(response);
                 if(!response.data.status){
                      console.log("There are not cookies");
