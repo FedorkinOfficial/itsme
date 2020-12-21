@@ -35,6 +35,7 @@ class LoginAPI extends React.Component{
             }, {withCredentials: true})
             .then(function (response) {
                 //handle success
+                localStorage.setItem('token', response.body.token);
                 console.log(response.headers);
             })
             .catch(function (response) {
