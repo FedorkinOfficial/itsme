@@ -33,12 +33,8 @@ class HeaderAPI extends React.Component{
         axios({
             method: 'post',
             url: 'https://mineproapi.000webhostapp.com/api/rusers',
-            data: formData,
-            headers:{
-                'Access-Control-Allow-Origin' : 'https://mineproapi.000webhostapp.com'
-            },
-            withCredentials: true
-            }, {withCredentials: true})
+            data: formData
+            })
             .then(function (response) {
                 console.log(response);
                 console.log(response.data);
