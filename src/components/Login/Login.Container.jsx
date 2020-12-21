@@ -30,7 +30,7 @@ class LoginAPI extends React.Component{
         //     })
         axios({
             method: 'post',
-            url: 'http://itsmeapi/api/login',
+            url: 'https://itsmeapi/api/login',
             data: formData
             })
             .then(function (response) {
