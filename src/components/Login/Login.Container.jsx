@@ -11,13 +11,13 @@ class LoginAPI extends React.Component{
         let formData = new FormData();
         formData.append('name', this.props.state.login.changedName);
         formData.append('pass', this.props.state.login.changedPass);
-        fetch(`https://mineproapi.000webhostapp.com/api/login`, {method: 'POST', body: formData}).then(function(response) {
-                console.log(response);
-                return response.json();
-            }).then(function(body) {
-                console.log(body);
-                authLogin(body); 
-            });
+        // fetch(`https://mineproapi.000webhostapp.com/api/login`, {method: 'POST', body: formData}).then(function(response) {
+        //         console.log(response);
+        //         return response.json();
+        //     }).then(function(body) {
+        //         console.log(body);
+        //         authLogin(body); 
+        //     });
         // axios.post('https://mineproapi.000webhostapp.com/api/login', {data: formData}, {withCredentials: true})
         // .then(function(response) {
         //         console.log(response);
@@ -28,22 +28,22 @@ class LoginAPI extends React.Component{
         //             console.log(response.data)
         //         }
         //     })
-        // axios({
-        //     method: 'post',
-        //     url: 'https://mineproapi.000webhostapp.com/api/login',
-        //     data: formData
-        //     })
-        //     .then(function (response) {
-        //         //handle success
-        //         const cookies = new Cookies();
-        //         cookies.set('myCat', 'Pacman', { path: '/' });
-        //         localStorage.setItem('token', response.data.token);
-        //         console.log(response.data);
-        //     })
-        //     .catch(function (response) {
-        //         //handle error
-        //         console.log(response);
-        //     });       
+        axios({
+            method: 'post',
+            url: 'https://mineproapi.000webhostapp.com/api/login',
+            data: formData
+            })
+            .then(function (response) {
+                //handle success
+                const cookies = new Cookies();
+                cookies.set('token', response.data.token, { path: '/', maxAge: 40});
+                localStorage.setItem('token', response.data.token);
+                console.log(response.data);
+            })
+            .catch(function (response) {
+                //handle error
+                console.log(response);
+            });       
     }
    
     render(){
