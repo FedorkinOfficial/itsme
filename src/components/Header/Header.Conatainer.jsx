@@ -21,7 +21,7 @@ class HeaderAPI extends React.Component{
                 console.log(response);
                 if(!response.data.status){
                      console.log("There are not cookies");
-                     console.log(response.data)
+                     console.log(response.data);
                 } else {
                     // authLogin(response.data.info);
                     console.log(response.data)
