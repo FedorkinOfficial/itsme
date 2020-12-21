@@ -8,7 +8,7 @@ import Cookie from 'universal-cookie';
 
 class HeaderAPI extends React.Component{
     componentDidMount(){
-        // let authLogin = (data) => this.props.authLoginAC(data);
+        let authLogin = (data) => this.props.authLoginAC(data);
         // fetch("https://mineproapi.000webhostapp.com/api/rusers",{method: 'POST', credentials: 'include'}).then(function(response) {
         //             console.log(response);
         //             return response.json();
@@ -36,6 +36,7 @@ class HeaderAPI extends React.Component{
             .then(function (response) {
                 console.log(response);
                 console.log(response.data);
+                authLogin(response.data.info);
             });
     }
  
