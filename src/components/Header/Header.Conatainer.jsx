@@ -27,9 +27,9 @@ class HeaderAPI extends React.Component{
         //             console.log(response.data)
         //         }
         //     })
-        let cook = get('token');
+        const cookies = new Cookies(req.headers.cookie);
         let formData = new FormData();
-        formData.append('token', cook);
+        formData.append('token', cookies.get('token'));
         axios({
             method: 'post',
             url: 'https://mineproapi.000webhostapp.com/api/users',
