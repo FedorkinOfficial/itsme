@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import Login from './Login';
 import {changeNameAC, changePassAC, authLoginAC} from '../../reducers/loginReducer';
 import axios from 'axios';
-import Cookies from 'universal-cookie';
+// import Cookies from 'universal-cookie';
 
 class LoginAPI extends React.Component{
     checkApi = () => {
