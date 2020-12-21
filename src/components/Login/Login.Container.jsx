@@ -7,7 +7,7 @@ import Cookies from 'universal-cookie';
 
 class LoginAPI extends React.Component{
     checkApi = () => {
-        //let authLogin = (data) => this.props.authLoginAC(data);  
+        let authLogin = (data) => this.props.authLoginAC(data);  
         let formData = new FormData();
         formData.append('name', this.props.state.login.changedName);
         formData.append('pass', this.props.state.login.changedPass);
@@ -39,6 +39,7 @@ class LoginAPI extends React.Component{
                 cookies.set('token', response.data.token, { path: '/', maxAge: 40});
                 localStorage.setItem('token', response.data.token);
                 console.log(response.data);
+                authLogin(response.data); 
             })
             .catch(function (response) {
                 //handle error
