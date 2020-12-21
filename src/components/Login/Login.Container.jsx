@@ -5,7 +5,7 @@ import {changeNameAC, changePassAC, authLoginAC} from '../../reducers/loginReduc
 
 class LoginAPI extends React.Component{
     checkApi = () => {
-        let authLogin = (data) => this.props.authLoginAC(data);  
+        // let authLogin = (data) => this.props.authLoginAC(data);  
         let formData = new FormData();
         formData.append('name', this.props.state.login.changedName);
         formData.append('pass', this.props.state.login.changedPass);
@@ -16,15 +16,16 @@ class LoginAPI extends React.Component{
         //         console.log(body);
         //         authLogin(body); 
         //     });
-        axios.post('https://mineproapi.000webhostapp.com/api/login', {data: formData}, {withCredentials: true}).then(function(response) {
-                console.log(response);
-                if(!response.data.status){
-                     console.log("There are not cookies");
-                } else {
-                    authLogin(response.data.info);
-                    console.log(response.data)
-                }
-            })       
+        axios.post('https://mineproapi.000webhostapp.com/api/login', {data: formData}, {withCredentials: true})
+        // .then(function(response) {
+        //         console.log(response);
+        //         if(!response.data.status){
+        //              console.log("There are not cookies");
+        //         } else {
+        //             authLogin(response.data.info);
+        //             console.log(response.data)
+        //         }
+        //     })       
     }
    
     render(){
