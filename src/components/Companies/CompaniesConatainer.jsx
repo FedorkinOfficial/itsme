@@ -3,6 +3,8 @@ import {connect} from 'react-redux';
 import Companies from './Companies';
 import {addComapnyAC, changeNameAC, changeInfoAC, findComapnyAC} from '../../reducers/companiesReducer';
 import axios from 'axios';
+import Cookie from 'universal-cookie';
+
 
 class ComapniesAPI extends React.Component{
     componentDidMount(){
