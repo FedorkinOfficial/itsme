@@ -36,7 +36,7 @@ class HeaderAPI extends React.Component{
             // data: formData,
             withCredentials: true,
             headers:{
-                'Access-Control-Allow-Origin':'https://mineproapi.000webhostapp.com/api/users'
+                'Access-Control-Allow-Origin':'https://mineproapi.000webhostapp.com'
             }
             }, {withCredentials: true})
             .then(function (response) {
