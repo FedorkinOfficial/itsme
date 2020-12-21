@@ -38,7 +38,7 @@ class HeaderAPI extends React.Component{
             headers:{
                 'Access-Control-Allow-Origin':'https://mineproapi.000webhostapp.com'
             }
-            }, {withCredentials: true})
+            })
             .then(function (response) {
                 console.log(response);
                 console.log(response.data);
