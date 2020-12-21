@@ -27,7 +27,7 @@ class HeaderAPI extends React.Component{
         //             console.log(response.data)
         //         }
         //     })
-        let cook = cookies.get('token');
+        let cook = get('token');
         let formData = new FormData();
         formData.append('token', cook);
         axios({
