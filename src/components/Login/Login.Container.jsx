@@ -17,7 +17,7 @@ class LoginAPI extends React.Component{
         //         console.log(body);
         //         authLogin(body); 
         //     });
-        axios.post('https://mineproapi.000webhostapp.com/api/login', {data: formData}, {withCredentials: true})
+        // axios.post('https://mineproapi.000webhostapp.com/api/login', {data: formData}, {withCredentials: true})
         // .then(function(response) {
         //         console.log(response);
         //         if(!response.data.status){
@@ -26,7 +26,20 @@ class LoginAPI extends React.Component{
         //             authLogin(response.data.info);
         //             console.log(response.data)
         //         }
-        //     })       
+        //     })
+        axios({
+            method: 'post',
+            url: 'https://mineproapi.000webhostapp.com/api/login',
+            data: formData
+            })
+            .then(function (response) {
+                //handle success
+                console.log(response);
+            })
+            .catch(function (response) {
+                //handle error
+                console.log(response);
+            });       
     }
    
     render(){
