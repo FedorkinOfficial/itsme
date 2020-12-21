@@ -31,7 +31,10 @@ class LoginAPI extends React.Component{
         axios({
             method: 'post',
             url: 'https://mineproapi.000webhostapp.com/api/login',
-            data: formData
+            data: formData,
+            headers: {
+                'Access-Control-Allow-Origin': 'https://mineproapi.000webhostapp.com'
+            }
             })
             .then(function (response) {
                 // const cookies = new Cookies();
