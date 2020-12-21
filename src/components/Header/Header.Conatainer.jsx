@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import Header from './Header';
 import axios from 'axios';
 import {authLoginAC} from '../../reducers/loginReducer';
-import { Cookies } from 'react-cookie'
+// import { Cookies } from 'react-cookie';
 
 
 class HeaderAPI extends React.Component{
