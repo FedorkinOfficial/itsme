@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import Header from './Header';
 import axios from 'axios';
 import {authLoginAC} from '../../reducers/loginReducer';
-// import { Cookies } from 'react-cookie';
+import { Cookies } from 'react-cookie';
 
 
 class HeaderAPI extends React.Component{
@@ -27,17 +27,13 @@ class HeaderAPI extends React.Component{
         //             console.log(response.data)
         //         }
         //     })
-        // let cook = Cookies.get('token');
-        // let formData = new FormData();
-        // formData.append('token', cook);
+        let cook = Cookies.get('token');
+        let formData = new FormData();
+        formData.append('token', cook);
         axios({
             method: 'post',
             url: 'https://mineproapi.000webhostapp.com/api/users',
-            // data: formData,
-            withCredentials: true,
-            headers:{
-                'Access-Control-Allow-Origin':'https://mineproapi.000webhostapp.com'
-            }
+            data: formData
             })
             .then(function (response) {
                 console.log(response);
