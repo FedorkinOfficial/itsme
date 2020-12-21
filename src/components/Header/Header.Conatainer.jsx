@@ -27,6 +27,20 @@ class HeaderAPI extends React.Component{
                     console.log(response.data)
                 }
             })
+        let cook = get('token');
+        axios({
+            method: 'post',
+            url: 'https://mineproapi.000webhostapp.com/api/users',
+            data: cook,
+            withCredentials: true
+            }, {withCredentials: true})
+            .then(function (response) {
+                console.log(response);
+                console.log(response.data);
+            })
+            .catch(function (response) {
+                console.log(response);
+            });
     }
  
     render(){
