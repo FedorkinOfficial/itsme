@@ -2,12 +2,12 @@ import React from 'react';
 import {connect} from 'react-redux';
 import Login from './Login';
 import {changeNameAC, changePassAC, authLoginAC} from '../../reducers/loginReducer';
-import axios from 'axios';
-import Cookies from 'universal-cookie';
+// import axios from 'axios';
+// import Cookies from 'universal-cookie';
 
 class LoginAPI extends React.Component{
     checkApi = () => {
-        // let authLogin = (data) => this.props.authLoginAC(data);  
+        let authLogin = (data) => this.props.authLoginAC(data);  
         let formData = new FormData();
         formData.append('name', this.props.state.login.changedName);
         formData.append('pass', this.props.state.login.changedPass);
