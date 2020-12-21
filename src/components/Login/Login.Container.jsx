@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import Login from './Login';
 import {changeNameAC, changePassAC, authLoginAC} from '../../reducers/loginReducer';
 import axios from 'axios';
+import Cookies from 'universal-cookie';
 
 class LoginAPI extends React.Component{
     checkApi = () => {
@@ -34,7 +35,9 @@ class LoginAPI extends React.Component{
             withCredentials: true
             }, {withCredentials: true})
             .then(function (response) {
-                //handle success
+                //handle success 
+                const cookies = new Cookies();
+                cookies.set('myCat', 'Pacman', { path: '/' });
                 localStorage.setItem('token', response.data.token);
                 console.log(response.data);
             })
