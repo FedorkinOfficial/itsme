@@ -34,10 +34,8 @@ class LoginAPI extends React.Component{
             data: formData
             })
             .then(function (response) {
-                //handle success
                 const cookies = new Cookies();
                 cookies.set('token', response.data.token, { path: '/', maxAge: 40});
-                localStorage.setItem('token', response.data.token);
                 console.log(response.data);
                 authLogin(response.data); 
             })    
