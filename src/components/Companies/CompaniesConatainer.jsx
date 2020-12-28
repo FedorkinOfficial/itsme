@@ -14,7 +14,7 @@ class ComapniesAPI extends React.Component{
         formData.append('token', cookie.get('token'));
         axios({
             method: 'post',
-            url: 'https://mineproapi.000webhostapp.com/api/companies',
+            url: 'https://itsmeapi/api/companies',
             data: formData,
             })
             .then(function (response) {
