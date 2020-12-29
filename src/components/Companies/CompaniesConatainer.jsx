@@ -42,7 +42,7 @@ class ComapniesAPI extends React.Component{
         formData.append('name', this.props.state.companies.changedName);
         formData.append('info', this.props.state.companies.changedInfo);
         formData.append('token', cookie.get('token'));
-        fetch(`https://mineproapi.000webhostapp.com/api/company`, {method: 'POST', body: formData}, {withCredentials: true}).then(function(response) {
+        fetch(`https://itsmeapi/api/company`, {method: 'POST', body: formData}, {withCredentials: true}).then(function(response) {
                 console.log(response);
                 return response.json();
             }).then(function(body) { 
