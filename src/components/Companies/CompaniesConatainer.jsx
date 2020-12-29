@@ -18,6 +18,7 @@ class ComapniesAPI extends React.Component{
             data: formData,
             })
             .then(function (response) {
+                console.log(response);
                 if(!response.data.status){
                     console.log("There are not companies");
                 } else {
