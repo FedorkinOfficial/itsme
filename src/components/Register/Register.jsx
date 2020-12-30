@@ -21,6 +21,7 @@ let Register = (props) => {
         }
         let clickRegister = () => {
             props.postApi();
+            props.clickRegisterAC();
         }
         return(
             <div className={classes.forms}>

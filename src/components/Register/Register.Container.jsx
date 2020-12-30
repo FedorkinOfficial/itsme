@@ -5,6 +5,7 @@ import {changeNameAC, changePassAC, clickRegisterAC} from '../../reducers/regist
 
 class RegisterAPI extends React.Component{
     postApi = () => {
+        
         let formData = new FormData();
         formData.append('name', this.props.state.register.changedName);
         formData.append('pass', this.props.state.register.changedPass);
