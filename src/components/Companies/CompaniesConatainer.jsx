@@ -26,16 +26,6 @@ class ComapniesAPI extends React.Component{
                     findComapny(response.data);
                 }             
             });
-        
-        // axios.get('https://itsmeapi/api/companies', {withCredentials: true}).then(function(response) {
-        //         console.log(response);
-        //         if(!response.data.status){
-        //              console.log("There are not companies");
-        //         } else {
-        //             console.log(response.data);
-        //             findComapny(response.data);
-        //         }
-        //     })
     }
     addCompany = () => {
         let formData = new FormData();
@@ -49,8 +39,7 @@ class ComapniesAPI extends React.Component{
             }).then(function(body) { 
                 console.log(body);
             }); 
-    } 
- 
+    }
     render(){
         return(
             <Companies state={this.props.state}
