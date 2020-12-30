@@ -23,6 +23,7 @@ class RegisterAPI extends React.Component{
                       changeName={this.props.changeNameAC}
                       changePass={this.props.changePassAC}
                       postApi={this.postApi}
+                      clickRegister={this.props.clickRegisterAC}
                       
             />
         )
