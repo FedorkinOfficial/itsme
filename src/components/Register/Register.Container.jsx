@@ -8,7 +8,7 @@ class RegisterAPI extends React.Component{
         let formData = new FormData();
         formData.append('name', this.props.state.register.changedName);
         formData.append('pass', this.props.state.register.changedPass);
-        fetch(`https://95.47.116.121/api/users`, {mode: 'no-cors', method: 'POST', body: formData, credentials: "include"}).then(function(response) {
+        fetch(`https://95.47.116.121/users`, {mode: 'no-cors', method: 'POST', body: formData, credentials: "include"}).then(function(response) {
                 console.log(response);
                 return response.json();
             }).then(function(body) { 
