@@ -16,7 +16,9 @@ class LoginAPI extends React.Component{
             url: 'https://95.47.116.121/api/login',
             data: formData,
             headers: {
-                'Access-Control-Allow-Origin': 'https://95.47.116.121'
+                'Access-Control-Allow-Origin': 'https://95.47.116.121',
+                'Access-Control-Allow-Methods': 'POST, GET, OPTIONS, DELETE, PUT',
+                'Access-Control-Allow-Headers': 'x-requested-with, Content-Type, origin, authorization, accept, x-access-toke'
             }
             })
             .then(function (response) {
