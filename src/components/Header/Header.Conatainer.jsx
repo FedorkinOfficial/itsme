@@ -12,24 +12,30 @@ class HeaderAPI extends React.Component{
         let cookie = new Cookie();
         let formData = new FormData();
         formData.append('token', cookie.get('token'));
-        axios({
-            method: 'post',
-            url: 'https://95.47.116.121/api/rusers',
-            data: formData,
-            headers: {
-                'Access-Control-Allow-Origin': 'https://95.47.116.121',
-                'Access-Control-Allow-Methods': 'POST, GET, OPTIONS, DELETE, PUT',
-                'Access-Control-Allow-Headers': 'x-requested-with, Content-Type, origin, authorization, accept, x-access-toke'
-            }
-            })
-            .then(function (response) {
-                if(!response.data.status){
-                    console.log("There are not cookies");
-                } else {
-                    console.log(response.data);
-                    authLogin(response.data);
-                }             
-            });
+        fetch(`https://95.47.116.121/api/rusers`, {mode: 'no-cors', method: 'POST', body: formData, credentials: "include"}).then(function(response) {
+                console.log(response);
+                return response.json();
+            }).then(function(body) { 
+                console.log(body);
+            }); 
+        // axios({
+        //     method: 'post',
+        //     url: 'https://95.47.116.121/api/rusers',
+        //     data: formData,
+        //     headers: {
+        //         'Access-Control-Allow-Origin': 'https://95.47.116.121',
+        //         'Access-Control-Allow-Methods': 'POST, GET, OPTIONS, DELETE, PUT',
+        //         'Access-Control-Allow-Headers': 'x-requested-with, Content-Type, origin, authorization, accept, x-access-toke'
+        //     }
+        //     })
+        //     .then(function (response) {
+        //         if(!response.data.status){
+        //             console.log("There are not cookies");
+        //         } else {
+        //             console.log(response.data);
+        //             authLogin(response.data);
+        //         }             
+        //     });
     }
  
     render(){
