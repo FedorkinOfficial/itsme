@@ -12,6 +12,7 @@ class LoginAPI extends React.Component{
         formData.append('name', this.props.state.login.changedName);
         formData.append('pass', this.props.state.login.changedPass);
         axios({
+            mode: 'no-cors',
             method: 'post',
             url: 'https://95.47.116.121/api/login',
             data: formData
