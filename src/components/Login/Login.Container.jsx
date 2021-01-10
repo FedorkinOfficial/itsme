@@ -13,7 +13,7 @@ class LoginAPI extends React.Component{
         formData.append('pass', this.props.state.login.changedPass);
         axios({
             method: 'post',
-            url: 'https://itsmeapi/api/login',
+            url: 'https://95.47.116.121/api/login',
             data: formData
             })
             .then(function (response) {

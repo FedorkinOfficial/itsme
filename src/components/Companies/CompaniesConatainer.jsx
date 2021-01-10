@@ -14,7 +14,7 @@ class ComapniesAPI extends React.Component{
         formData.append('token', cookie.get('token'));
         axios({
             method: 'post',
-            url: 'https://itsmeapi/api/companies',
+            url: 'https://95.47.116.121/api/companies',
             data: formData,
             })
             .then(function (response) {
