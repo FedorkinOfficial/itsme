@@ -13,10 +13,12 @@ class ComapniesAPI extends React.Component{
         let formData = new FormData();
         formData.append('token', cookie.get('token'));
         axios({
-            mode: 'no-cors',
             method: 'post',
             url: 'https://95.47.116.121/api/companies',
             data: formData,
+            headers: {
+                'Access-Control-Allow-Origin': 'https://95.47.116.121'
+            }
             })
             .then(function (response) {
                 console.log(response);
