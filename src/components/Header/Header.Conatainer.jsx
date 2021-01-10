@@ -1,14 +1,14 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import Header from './Header';
-import axios from 'axios';
+// import axios from 'axios';
 import {authLoginAC} from '../../reducers/loginReducer';
 import Cookie from 'universal-cookie';
 
 
 class HeaderAPI extends React.Component{
     componentDidMount(){
-        let authLogin = (data) => this.props.authLoginAC(data);
+        // let authLogin = (data) => this.props.authLoginAC(data);
         let cookie = new Cookie();
         let formData = new FormData();
         formData.append('token', cookie.get('token'));
