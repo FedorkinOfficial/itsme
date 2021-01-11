@@ -12,12 +12,11 @@ class HeaderAPI extends React.Component{
         let cookie = new Cookie();
         let formData = new FormData();
         formData.append('token', cookie.get('token'));
-        fetch(`https://95.47.116.121/api/rusers`, {mode: 'no-cors', method: 'POST', body: formData, credentials: "include"}).then(function(response) {
+        fetch(`https://95.47.116.121/api/users`, {mode: 'no-cors', method: 'POST', body: formData, credentials: "include"}).then(function(response) {
                 console.log(response);
                 return response.json();
-            }).then(function(body) { 
-                console.log(body);
-            }); 
+            });
+            
         // axios({
         //     method: 'post',
         //     url: 'https://95.47.116.121/api/rusers',
